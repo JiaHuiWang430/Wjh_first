@@ -15,7 +15,7 @@ public class OneFilter implements Filter {
         //得到请求行中浏览器地址uri
         String uri = requestHS.getRequestURI();
         //如果地址中含有login，那么无条件可以访问
-        if (uri.indexOf("login")!=-1){
+        if (uri.indexOf("login")!=-1||"/".equals(uri)){
             filterChain.doFilter(servletRequest,servletResponse);
             return;
         }
