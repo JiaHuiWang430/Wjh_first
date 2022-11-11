@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>重新登录</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 <body>
-<center>
-    <h1>用户不存在，请重新登陆</h1>
-    <form action="/user/login" method="post">
-        <table border="1" cellpadding="10" style="font-size: 20px;font-family: 幼圆;background-color: azure">
-            <tr>
-                <td>
-                    用户名
-                </td>
-                <td>
-                    <input type="text" name="userName">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    用户密码
-                </td>
-                <td>
-                    <input type="password" name="password">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="登录">
-                </td>
-                <td>
-                    <input type="reset">
-                </td>
-            </tr>
-        </table>
-    </form>
-</center>
+
+<div class="container" style="width: 500px" >
+    <div class="col-md-12 column" style="height: 100px">
+        <h1 align="center">用户不存在，请重新登陆！</h1>
+    </div>
+    <div style="width:auto">
+        <form class="form-horizontal" method="post" action="/user/login">
+            <div class="form-group" >
+                <label class="col-sm-2 control-label">用户名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="userName" placeholder="name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">密&nbsp&nbsp&nbsp&nbsp码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" >
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" >Sign in</button>
+                </div>
+                <div class="col-sm-offset-2 col-sm-10">
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
 </body>
 </html>
